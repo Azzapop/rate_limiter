@@ -1,6 +1,6 @@
 # Rate Limiter
 
-The rate limiter can be found in `lib/limiter.rb`. It limits API requests to 100 requests per 60 minutes.
+The rate limiter can be found in `lib/limiter.rb`. It limits API requests to 100 requests per 60 minutes. This limit can be modified using the `TIME_LIMIT` and `MAX_REQUESTS` vars located in the aforementioned file. The limiter is implemented as a middleware and is loaded in the main application file (`config/application.rb`).
 
 The rate limiter uses Redis to cache each requester and measure their requests per hour.
 
