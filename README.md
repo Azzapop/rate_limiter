@@ -1,24 +1,18 @@
-# README
+# Rate Limiter
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+The rate limiter can be found in `lib/limiter.rb`. It limits API requests to 100 requests per 60 minutes.
 
-Things you may want to cover:
+The rate limiter uses Redis to cache each requester and measure their requests per hour.
 
-* Ruby version
+### Development
 
-* System dependencies
+Set env var `REDIS_URL` (for development this would most likely be `redis://localhost:6379/0/cache`)
 
-* Configuration
+Requires `Redis`
 
-* Database creation
+To begin, `bundle install` then `rails s`
 
-* Database initialization
 
-* How to run the test suite
+### Tests
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+Run tests using `rails test`
